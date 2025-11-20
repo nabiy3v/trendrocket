@@ -1,11 +1,9 @@
-import logo from "../assets/logo.png"; // logoni o'zing joylashtirasan
+import logo from "/assets/logo.png";
 
 export default function Navbar() {
   return (
     <header className="w-full px-4 py-4 bg-[#0B0B0D]">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-
-        {/* Logo */}
         <div className="flex items-center">
           <img
             src={logo}
@@ -14,7 +12,6 @@ export default function Navbar() {
           />
         </div>
 
-        {/* Right Side */}
         <div className="flex items-center gap-4">
           <button className="text-gray-300 text-sm hover:text-white transition">
             Login
