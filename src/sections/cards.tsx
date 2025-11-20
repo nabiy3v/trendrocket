@@ -201,6 +201,44 @@ export default function Cards() {
           </div>
         </div>
       </div>
+      <div className="slide-nav-2 flex justify-center space-x-2">
+      <div 
+        className="w-3 h-3 bg-purple-500 rounded-full cursor-pointer"
+        aria-label="Show slide 1 of 6"
+        role="button"
+        tabIndex={0}
+      ></div>
+      <div 
+        className="w-3 h-3 bg-gray-600 rounded-full cursor-pointer"
+        aria-label="Show slide 2 of 6"
+        role="button"
+        tabIndex={-1}
+      ></div>
+      <div 
+        className="w-3 h-3 bg-gray-600 rounded-full cursor-pointer"
+        aria-label="Show slide 3 of 6"
+        role="button"
+        tabIndex={-1}
+      ></div>
+      <div 
+        className="w-3 h-3 bg-gray-600 rounded-full cursor-pointer"
+        aria-label="Show slide 4 of 6"
+        role="button"
+        tabIndex={-1}
+      ></div>
+      <div 
+        className="w-3 h-3 bg-gray-600 rounded-full cursor-pointer"
+        aria-label="Show slide 5 of 6"
+        role="button"
+        tabIndex={-1}
+      ></div>
+      <div 
+        className="w-3 h-3 bg-gray-600 rounded-full cursor-pointer"
+        aria-label="Show slide 6 of 6"
+        role="button"
+        tabIndex={-1}
+      ></div>
+    </div>
     </section>
   );
 }

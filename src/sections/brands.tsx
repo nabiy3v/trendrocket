@@ -1,10 +1,10 @@
 export default function Brands() {
     return (
-      <section className="bg-[#0B0B0D] text-white py-8 px-2 sm:py-12 my-[100px] ">
+      <section className="text-white py-8 px-2 sm:py-12 my-[100px] ">
         <p className="text-center text-xs sm:text-sm text-gray-400 mb-4 sm:mb-6 px-4 sm:px-0">
           Trusted by world's fastest-growing ecommerce brands
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 max-w-[1000px] mx-auto">
+        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 max-w-[1000px] mx-auto space-y-5 mt-8">
           <img src="/assets/thank-tom.png" alt="THANK TOM" className="h-4 sm:h-6" />
           <img src="/assets/SMT.svg" alt="SMT" className="h-4 sm:h-6" />
           <img src="/assets/carbon-coco.png" alt="CARBON COCO" className="h-4 sm:h-6" />
