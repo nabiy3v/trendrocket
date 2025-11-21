@@ -13,9 +13,9 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <button className="text-gray-300 text-sm hover:text-white transition">
+          {/* <button className="text-gray-300 text-sm hover:text-white transition">
             Login
-          </button>
+          </button> */}
 
           <button
             className="

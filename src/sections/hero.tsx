@@ -19,7 +19,7 @@ export default function Hero() {
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-20 sm:py-24 md:py-28 text-center">
         <h1 className="text-3xl sm:text-4xl md:text-[55px] font-medium leading-snug sm:leading-tight md:leading-tight">
-          Discover your next million dollar
+          Discover your next million dollar {' '}
           <br className="hidden sm:block" />
           product in just minutes
         </h1>
