@@ -1,4 +1,13 @@
 export default function Hero() {
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
   return (
     <section className="relative w-full bg-[#0B0B0D] text-white">
       <img
@@ -33,15 +42,18 @@ export default function Hero() {
           }}
         >
           <button
-            className="
-          px-8 py-3 rounded-full text-base font-semibold
-          bg-black text-white
-          transition cursor-pointer
-          whitespace-nowrap /* Matn bir qatorda qolishi uchun */
-        "
-          >
-            Start Your 7 Day Free Trial
-          </button>
+      onClick={scrollToPricing}
+      className="
+        px-8 py-3 rounded-full text-base font-semibold
+        bg-black text-white
+        transition cursor-pointer
+        whitespace-nowrap
+        hover:bg-gray-800
+        focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50
+      "
+    >
+      Start Your 7 Day Free Trial
+    </button>
         </div>
       </div>
     </section>

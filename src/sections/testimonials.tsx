@@ -11,8 +11,8 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="rounded-lg p-6 flex flex-col h-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-16">
+          <div className="rounded-lg py-6 flex flex-col h-full">
             <div className="mb-6 flex-grow">
               <p className="text-[17px] leading-relaxed">
                 "The product information in TrendRocket has removed the
@@ -36,7 +36,7 @@ export default function Testimonials() {
             </div>
           </div>
 
-          <div className="rounded-lg p-6 flex flex-col h-full">
+          <div className="rounded-lg py-6 flex flex-col h-full">
             <div className="mb-6 flex-grow">
               <p className="text-[17px] leading-relaxed">
                 "I found I was constantly jumping between platforms comparing
@@ -61,7 +61,7 @@ export default function Testimonials() {
             </div>
           </div>
 
-          <div className="rounded-lg p-6 flex flex-col h-full">
+          <div className="rounded-lg py-6 flex flex-col h-full">
             <div className="mb-6 flex-grow">
               <p className="text-[17px] leading-relaxed">
                 "With the market constantly changing, TrendRocket is giving me

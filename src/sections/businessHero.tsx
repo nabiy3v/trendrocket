@@ -1,4 +1,13 @@
 export default function BusinessHero() {
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
   return (
     <div className="w-full bg-[#0f0f11] text-white py-20 px-4 relative mt-[100px]">
       <img
@@ -17,7 +26,7 @@ export default function BusinessHero() {
           You're just one click away from your next million-dollar product.
         </p>
 
-        <button className="bg-white text-black font-semibold py-2 px-6 sm:py-4 sm:px-8 rounded-full transition duration-200 cursor-pointer">
+        <button onClick={scrollToPricing} className="bg-white text-black font-semibold py-2 px-6 sm:py-4 sm:px-8 rounded-full transition duration-200 cursor-pointer">
           Start Your 7 Day Free Trial
         </button>
       </div>

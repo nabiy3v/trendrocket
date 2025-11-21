@@ -1,6 +1,6 @@
 export default function Pricing() {
   return (
-    <section className="w-full bg-[#0f0f11] text-white py-16 px-4 mt-[50px]">
+    <section id="pricing" className="w-full bg-[#0f0f11] text-white py-16 px-4 mt-[50px]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-semibold">

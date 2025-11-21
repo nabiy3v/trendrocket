@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <div className="footer-section bg-[#0f0f11] text-white py-12 px-4 mt-[50px]">
       <div className="max-w-7xl mx-auto">
-        <div className="is-footer">
+        <div className="is-footer mx-0 md:mx-8">
           <div className="footer-component flex flex-col lg:flex-row justify-between items-start lg:items-center mb-5 gap-8">
             <a href="#" className="fotter-left">
               <img
