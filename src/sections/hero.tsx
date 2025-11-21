@@ -25,7 +25,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-gray-300 mt-4 sm:mt-6 text-sm sm:text-base md:text-lg max-w-xs sm:max-w-2xl mx-auto">
-          Find your next winning product through TrendRocket <br />
+          Find your next winning product through TrendRocket <br className="hidden sm:block" />
           the go-to D2C research tool that analyzes all the data you need, all
           in one place.
         </p>
