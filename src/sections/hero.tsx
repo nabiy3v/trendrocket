@@ -44,7 +44,7 @@ export default function Hero() {
           <button
       onClick={scrollToPricing}
       className="
-        px-8 py-3 rounded-full text-base font-semibold
+        px-4 py-2 sm:px-8 sm:py-3 rounded-full text-base font-semibold
         bg-black text-white
         transition cursor-pointer
         whitespace-nowrap

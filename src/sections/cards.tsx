@@ -139,7 +139,7 @@ export default function Cards() {
               className={`
                 bg-[#141418] border border-white/10 rounded-2xl p-6 
                 transition-all duration-300 ease-in-out cursor-pointer
-                flex flex-col w-96 flex-shrink-0 snap-center
+                flex flex-col w-[330px] sm:w-96 flex-shrink-0 snap-center
                 ${card.hoverColor}
                 ${activeIndex === index 
                   ? 'border-white/40 bg-[#1a1a20]' // scale-[1.02] olib tashlandi

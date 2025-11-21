@@ -11,7 +11,7 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-4 sm:mx-16">
           <div className="rounded-lg py-6 flex flex-col h-full">
             <div className="mb-6 flex-grow">
               <p className="text-[17px] leading-relaxed">
