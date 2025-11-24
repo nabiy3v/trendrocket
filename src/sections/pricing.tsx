@@ -2,13 +2,103 @@ import { useState } from 'react';
 
 export default function Pricing() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [errors, setErrors] = useState({ name: '', surname: '' });
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openModal = () => {
+    setIsModalOpen(true);
+    setErrors({ name: '', surname: '' }); // Modal ochilganda errorlarni tozalash
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setErrors({ name: '', surname: '' }); // Modal yopilganda errorlarni tozalash
+  };
+
+  // Validation funksiyasi
+  const validateForm = (name: string, surname: string) => {
+    const newErrors = { name: '', surname: '' };
+    let isValid = true;
+
+    // Name validation
+    if (name.length < 3) {
+      newErrors.name = 'Name must be at least 3 characters long';
+      isValid = false;
+    } else if (/\d/.test(name)) {
+      newErrors.name = 'Name cannot contain numbers';
+      isValid = false;
+    }
+
+    // Surname validation
+    if (surname.length < 3) {
+      newErrors.surname = 'Surname must be at least 3 characters long';
+      isValid = false;
+    } else if (/\d/.test(surname)) {
+      newErrors.surname = 'Surname cannot contain numbers';
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    const form = e.currentTarget;
+    const name = (form.elements.namedItem('name') as HTMLInputElement).value;
+    const surname = (form.elements.namedItem('surname') as HTMLInputElement).value;
+    const description = (form.elements.namedItem('description') as HTMLInputElement).value;
+
+    // Formani validatsiya qilish
+    if (!validateForm(name, surname)) {
+      return; // Agar validatsiya o'tmasa, request yuborilmaydi
+    }
+
+    try {
+      const res = await fetch("http://localhost:4000/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, surname, description })
+      });
+
+      const data = await res.json();
+
+      if (data.ok) {
+        alert("Xabar Telegramga yuborildi!");
+        closeModal();
+        form.reset(); // Formani tozalash
+      } else {
+        alert("Xatolik yuz berdi!");
+      }
+    } catch (error) {
+      console.error("Request error:", error);
+      alert("Serverga ulanishda xatolik!");
+    }
+  };
+
+  // Real-time validation (input change paytida)
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    
+    if (name === 'name' || name === 'surname') {
+      const newErrors = { ...errors };
+      
+      if (value.length > 0 && value.length < 3) {
+        newErrors[name as keyof typeof errors] = `${name === 'name' ? 'Name' : 'Surname'} must be at least 3 characters long`;
+      } else if (/\d/.test(value)) {
+        newErrors[name as keyof typeof errors] = `${name === 'name' ? 'Name' : 'Surname'} cannot contain numbers`;
+      } else {
+        newErrors[name as keyof typeof errors] = '';
+      }
+      
+      setErrors(newErrors);
+    }
+  };
 
   return (
     <>
       <section id="pricing" className="w-full bg-[#0f0f11] text-white py-16 px-4 mt-[50px]">
+        {/* ... existing pricing content ... */}
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-semibold">
@@ -21,8 +111,7 @@ export default function Pricing() {
               <div className="mb-6">
                 <h3 className="text-2xl font-semibold mb-2">Basic</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
-                  Pricing for every stage because of those wanting to load the
-                  wallet.
+                  Pricing for every stage because of those wanting to load the wallet.
                 </p>
               </div>
 
@@ -68,8 +157,7 @@ export default function Pricing() {
               <div
                 className="absolute inset-0 rounded-2xl p-[1px] pointer-events-none"
                 style={{
-                  background:
-                    "linear-gradient(to bottom right, #8A2BE2, #FF1493)",
+                  background: "linear-gradient(to bottom right, #8A2BE2, #FF1493)",
                 }}
               >
                 <div className="w-full h-full bg-[#0E0C15] rounded-2xl"></div>
@@ -77,12 +165,9 @@ export default function Pricing() {
 
               <div className="relative z-10">
                 <div className="mb-6">
-                  <h3 className="text-2xl font-semibold mb-2 text-[#A259FF]">
-                    Pro
-                  </h3>
+                  <h3 className="text-2xl font-semibold mb-2 text-[#A259FF]">Pro</h3>
                   <p className="text-gray-400 text-sm leading-relaxed">
-                    Designed for businesses that are prepared to accelerate their
-                    growth.
+                    Designed for businesses that are prepared to accelerate their growth.
                   </p>
                 </div>
 
@@ -121,30 +206,6 @@ export default function Pricing() {
                     <img src="/assets/check-circle.svg" alt="" />
                     Social and community performance
                   </li>
-                  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-                    <img src="/assets/check-circle.svg" alt="" />
-                    Google Auto and more than 1 million ($1.0%)
-                  </li>
-                  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-                    <img src="/assets/check-circle.svg" alt="" />
-                    Tired visibility spaces
-                  </li>
-                  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-                    <img src="/assets/check-circle.svg" alt="" />
-                    Access to traffic and revenue estimates
-                  </li>
-                  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-                    <img src="/assets/check-circle.svg" alt="" />
-                    Profit margin and competitor analysis
-                  </li>
-                  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-                    <img src="/assets/check-circle.svg" alt="" />
-                    Supplies for featured products
-                  </li>
-                  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-                    <img src="/assets/check-circle.svg" alt="" />
-                    Premium community
-                  </li>
                 </ul>
               </div>
             </div>
@@ -169,17 +230,25 @@ export default function Pricing() {
                 </button>
               </div>
 
-              <form className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                     Name
                   </label>
                   <input
+                    name="name"
                     type="text"
-                    id="name"
-                    className="w-full bg-[#0f0f11] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
+                    className={`w-full bg-[#0f0f11] border rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none transition-colors ${
+                      errors.name ? 'border-red-500' : 'border-white/10 focus:border-purple-500'
+                    }`}
                     placeholder="Enter your name"
+                    required
+                    minLength={3}
+                    onChange={handleInputChange}
                   />
+                  {errors.name && (
+                    <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                  )}
                 </div>
 
                 <div>
@@ -187,11 +256,19 @@ export default function Pricing() {
                     Surname
                   </label>
                   <input
+                    name="surname"
                     type="text"
-                    id="surname"
-                    className="w-full bg-[#0f0f11] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
+                    className={`w-full bg-[#0f0f11] border rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none transition-colors ${
+                      errors.surname ? 'border-red-500' : 'border-white/10 focus:border-purple-500'
+                    }`}
                     placeholder="Enter your surname"
+                    required
+                    minLength={3}
+                    onChange={handleInputChange}
                   />
+                  {errors.surname && (
+                    <p className="text-red-500 text-xs mt-1">{errors.surname}</p>
+                  )}
                 </div>
 
                 <div>
@@ -199,16 +276,22 @@ export default function Pricing() {
                     Description
                   </label>
                   <textarea
-                    id="description"
+                    name="description"
                     rows={4}
                     className="w-full bg-[#0f0f11] border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors resize-none"
                     placeholder="Tell us about your business needs..."
+                    required
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-[#A259FF] text-black font-semibold py-3 px-6 rounded-full transition duration-200 hover:bg-[#8A2BE2] mt-6"
+                  disabled={!!errors.name || !!errors.surname}
+                  className={`w-full font-semibold py-3 px-6 rounded-full transition duration-200 mt-6 ${
+                    errors.name || errors.surname
+                      ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
+                      : 'bg-[#A259FF] text-black hover:bg-[#8A2BE2] cursor-pointer'
+                  }`}
                 >
                   Start Your Free Trial
                 </button>
