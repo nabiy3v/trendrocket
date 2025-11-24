@@ -78,7 +78,7 @@ export default function Cards() {
   const handleScroll = () => {
     if (scrollRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-      
+
       if (scrollLeft + clientWidth >= scrollWidth - 10) {
         setActiveIndex(cardData.length - 1);
         return;
@@ -111,18 +111,16 @@ export default function Cards() {
   };
 
   return (
-    <section className="w-full bg-[#0f0f11] text-white py-16 px-4 overflow-hidden">
+    <section className="  w-full bg-[#0f0f11] text-white py-16 px-4 overflow-hidden">
       <div className="text-center mb-12">
         <h1 className="text-3xl md:text-4xl font-semibold">
           What you'll get with <br />{" "}
-            TrendRocket
-          
+          TrendRocket
         </h1>
         <p className="text-gray-400 mt-2">
           Trusted by world's fastest-growing ecommerce brands
         </p>
       </div>
-
       <div 
         ref={scrollRef}
         onScroll={handleScroll}
@@ -142,7 +140,7 @@ export default function Cards() {
                 flex flex-col w-[300px] sm:w-96 flex-shrink-0 snap-center
                 ${card.hoverColor}
                 ${activeIndex === index 
-                  ? 'border-white/40 bg-[#1a1a20]' // scale-[1.02] olib tashlandi
+                  ? 'border-white/40 bg-[#1a1a20]'
                   : 'opacity-80 hover:opacity-100'}
               `}
             >

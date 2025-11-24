@@ -3,7 +3,7 @@ import Brands from "../sections/brands";
 import BusinessHero from "../sections/businessHero";
 import Cards from "../sections/cards";
 import FAQ from "../sections/faq";
-import Footer from "../sections/footer";
+import Footer from "../components/footer";
 import Hero from "../sections/hero";
 import Platform from "../sections/platformComparison";
 import Pricing from "../sections/pricing";

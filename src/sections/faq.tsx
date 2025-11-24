@@ -61,7 +61,7 @@ export default function FAQ() {
           {faqData.map((faq, index) => (
             <div key={index} className="border-b border-gray-700 pb-4">
               <button 
-                className="flex justify-between items-center w-full text-left py-3"
+                className="flex justify-between items-center w-full text-left py-3 cursor-pointer"
                 onClick={() => toggleFAQ(index)}
               >
                 <h4 className="sm:text-lg font-medium">
