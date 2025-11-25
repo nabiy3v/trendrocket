@@ -181,69 +181,47 @@ export default function Pricing() {
 
     <ul className="space-y-3">
       <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-        </svg>
+        <img src="/assets/check-circle.svg" alt="" />
         Brand search
       </li>
       <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-        </svg>
+        <img src="/assets/check-circle.svg" alt="" />
         Mainly access to new features
       </li>
       <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-        </svg>
+        <img src="/assets/check-circle.svg" alt="" />
         $6,000+ brands to explore
       </li>
       <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-        </svg>
+        <img src="/assets/check-circle.svg" alt="" />
         Overview and review teacher
       </li>
       <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-        </svg>
+        <img src="/assets/check-circle.svg" alt="" />
         Social and community performance
       </li>
       <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-        </svg>
+        <img src="/assets/check-circle.svg" alt="" />
         Priority customer support
       </li>
       <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-        </svg>
+        <img src="/assets/check-circle.svg" alt="" />
         Weekly trend reports
       </li>
       <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-        </svg>
+        <img src="/assets/check-circle.svg" alt="" />
         Competitor insights
       </li>
       <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-        </svg>
+        <img src="/assets/check-circle.svg" alt="" />
         Instant growth analytics
       </li>
       <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-        </svg>
+        <img src="/assets/check-circle.svg" alt="" />
         Access to premium dashboards
       </li>
       <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-        </svg>
+        <img src="/assets/check-circle.svg" alt="" />
         Advanced search filters
       </li>
     </ul>
