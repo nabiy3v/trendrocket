@@ -55,7 +55,7 @@ export default function Pricing() {
     }
 
     try {
-      const res = await fetch("http://localhost:4000/send", {
+      const res = await fetch("https://backend-trendrocket-7kmr.onrender.com/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, surname, description })
@@ -155,7 +155,7 @@ export default function Pricing() {
 
             <div className="bg-[#0E0C15] rounded-2xl p-8 transition relative">
               <div
-                className="absolute inset-0 rounded-2xl p-[1px] pointer-events-none"
+                className="absolute inset-0 rounded-2xl  pointer-events-none"
                 style={{
                   background: "linear-gradient(to bottom right, #8A2BE2, #FF1493)",
                 }}
@@ -180,33 +180,58 @@ export default function Pricing() {
 
                 <button 
                   onClick={openModal}
-                  className="w-full cursor-pointer bg-[#A259FF] text-black font-semibold py-3 px-6 rounded-full transition duration-200 mb-8 hover:bg-[#8A2BE2]"
+                  className="w-full cursor-pointer bg-[#A259FF] text-black font-semibold border-3 py-3 px-6 rounded-full transition duration-200 mb-8 hover:bg-[#8A2BE2]"
                 >
                   Start Your Free Trial
                 </button>
 
                 <ul className="space-y-3">
-                  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-                    <img src="/assets/check-circle.svg" alt="" />
-                    Brand search
-                  </li>
-                  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-                    <img src="/assets/check-circle.svg" alt="" />
-                    Mainly access to new features
-                  </li>
-                  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-                    <img src="/assets/check-circle.svg" alt="" />
-                    $6,000+ brands to explore
-                  </li>
-                  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-                    <img src="/assets/check-circle.svg" alt="" />
-                    Overview and review teacher
-                  </li>
-                  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-                    <img src="/assets/check-circle.svg" alt="" />
-                    Social and community performance
-                  </li>
-                </ul>
+  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+    <img src="/assets/check-circle.svg" alt="" />
+    Brand search
+  </li>
+  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+    <img src="/assets/check-circle.svg" alt="" />
+    Mainly access to new features
+  </li>
+  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+    <img src="/assets/check-circle.svg" alt="" />
+    $6,000+ brands to explore
+  </li>
+  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+    <img src="/assets/check-circle.svg" alt="" />
+    Overview and review teacher
+  </li>
+  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+    <img src="/assets/check-circle.svg" alt="" />
+    Social and community performance
+  </li>
+  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+    <img src="/assets/check-circle.svg" alt="" />
+    Priority customer support
+  </li>
+  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+    <img src="/assets/check-circle.svg" alt="" />
+    Weekly trend reports
+  </li>
+  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+    <img src="/assets/check-circle.svg" alt="" />
+    Competitor insights
+  </li>
+  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+    <img src="/assets/check-circle.svg" alt="" />
+    Instant growth analytics
+  </li>
+  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+    <img src="/assets/check-circle.svg" alt="" />
+    Access to premium dashboards
+  </li>
+  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+    <img src="/assets/check-circle.svg" alt="" />
+    Advanced search filters
+  </li>
+</ul>
+
               </div>
             </div>
           </div>
