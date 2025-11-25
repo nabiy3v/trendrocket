@@ -75,8 +75,6 @@ export default function Pricing() {
       alert("Serverga ulanishda xatolik!");
     }
   };
-
-  // Real-time validation (input change paytida)
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     
@@ -153,87 +151,104 @@ export default function Pricing() {
               </ul>
             </div>
 
-            <div className="bg-[#0E0C15] rounded-2xl p-8 transition relative">
-              <div
-                className="absolute inset-0 rounded-2xl  pointer-events-none"
-                style={{
-                  background: "linear-gradient(to bottom right, #8A2BE2, #FF1493)",
-                }}
-              >
-                <div className="w-full h-full bg-[#0E0C15] rounded-2xl"></div>
-              </div>
+            <div className="bg-[#0E0C15] rounded-2xl p-8 transition relative border-2 border-transparent"
+     style={{
+       background: `linear-gradient(#0E0C15, #0E0C15) padding-box,
+                    linear-gradient(to bottom right, #8A2BE2, #FF1493) border-box`
+     }}>
+  
+  <div className="relative z-10">
+    <div className="mb-6">
+      <h3 className="text-2xl font-semibold mb-2 text-[#A259FF]">Pro</h3>
+      <p className="text-gray-400 text-sm leading-relaxed">
+        Designed for businesses that are prepared to accelerate their growth.
+      </p>
+    </div>
 
-              <div className="relative z-10">
-                <div className="mb-6">
-                  <h3 className="text-2xl font-semibold mb-2 text-[#A259FF]">Pro</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    Designed for businesses that are prepared to accelerate their growth.
-                  </p>
-                </div>
+    <div className="mb-6">
+      <div className="flex items-baseline gap-1">
+        <span className="text-7xl font-medium">$99</span>
+        <span className="text-gray-400">per month</span>
+      </div>
+    </div>
 
-                <div className="mb-6">
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-7xl font-medium">$99</span>
-                    <span className="text-gray-400">per month</span>
-                  </div>
-                </div>
+    <button 
+      onClick={openModal}
+      className="w-full cursor-pointer bg-[#A259FF] text-black font-semibold py-3 px-6 rounded-full transition duration-200 mb-8 hover:bg-[#8A2BE2] hover:text-white"
+    >
+      Start Your Free Trial
+    </button>
 
-                <button 
-                  onClick={openModal}
-                  className="w-full cursor-pointer bg-[#A259FF] text-black font-semibold border-3 py-3 px-6 rounded-full transition duration-200 mb-8 hover:bg-[#8A2BE2]"
-                >
-                  Start Your Free Trial
-                </button>
-
-                <ul className="space-y-3">
-  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-    <img src="/assets/check-circle.svg" alt="" />
-    Brand search
-  </li>
-  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-    <img src="/assets/check-circle.svg" alt="" />
-    Mainly access to new features
-  </li>
-  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-    <img src="/assets/check-circle.svg" alt="" />
-    $6,000+ brands to explore
-  </li>
-  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-    <img src="/assets/check-circle.svg" alt="" />
-    Overview and review teacher
-  </li>
-  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-    <img src="/assets/check-circle.svg" alt="" />
-    Social and community performance
-  </li>
-  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-    <img src="/assets/check-circle.svg" alt="" />
-    Priority customer support
-  </li>
-  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-    <img src="/assets/check-circle.svg" alt="" />
-    Weekly trend reports
-  </li>
-  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-    <img src="/assets/check-circle.svg" alt="" />
-    Competitor insights
-  </li>
-  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-    <img src="/assets/check-circle.svg" alt="" />
-    Instant growth analytics
-  </li>
-  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-    <img src="/assets/check-circle.svg" alt="" />
-    Access to premium dashboards
-  </li>
-  <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
-    <img src="/assets/check-circle.svg" alt="" />
-    Advanced search filters
-  </li>
-</ul>
-
-              </div>
-            </div>
+    <ul className="space-y-3">
+      <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+        </svg>
+        Brand search
+      </li>
+      <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+        </svg>
+        Mainly access to new features
+      </li>
+      <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+        </svg>
+        $6,000+ brands to explore
+      </li>
+      <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+        </svg>
+        Overview and review teacher
+      </li>
+      <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+        </svg>
+        Social and community performance
+      </li>
+      <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+        </svg>
+        Priority customer support
+      </li>
+      <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+        </svg>
+        Weekly trend reports
+      </li>
+      <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+        </svg>
+        Competitor insights
+      </li>
+      <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+        </svg>
+        Instant growth analytics
+      </li>
+      <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+        </svg>
+        Access to premium dashboards
+      </li>
+      <li className="flex items-center gap-3 border-b-[0.5px] pb-3 border-[#2E2E2E] text-sm text-gray-300">
+        <svg className="w-5 h-5 text-[#A259FF]" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+        </svg>
+        Advanced search filters
+      </li>
+    </ul>
+  </div>
+</div>
           </div>
         </div>
       </section>
